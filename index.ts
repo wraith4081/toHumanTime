@@ -2,6 +2,10 @@ const floor = (num: number) => ~~num;
 
 export default function fancyTimeFormat(duration: number)
 { 
+  if (duration > 185542587187199) return null;
+  
+  if (isNaN(parseInt(duration)) || duration <= 0) return null;
+  
   const timePeriods = [
     'day',
     'hour',
